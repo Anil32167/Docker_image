@@ -1,8 +1,9 @@
 FROM eclipse-temurin:11-jre
 
-EXPOSE 8080
-
-COPY ./build/libs/my-app-1.0-SNAPSHOT.jar /usr/app/
 WORKDIR /usr/app
 
-ENTRYPOINT ["java", "-jar", "my-app-1.0-SNAPSHOT.jar"]
+COPY build/libs/New-Java-Gradle-0.0.1-SNAPSHOT.jar app.jar
+
+EXPOSE 8080
+
+ENTRYPOINT ["java", "-jar", "app.jar"]
