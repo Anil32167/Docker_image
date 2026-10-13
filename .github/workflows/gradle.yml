@@ -38,6 +38,12 @@ jobs:
      
     - name: Find generated JAR
       run: find build/libs -maxdepth 1 -type f -name "*.jar" -print 
+    
+    - name: Verify JAR before Docker build
+     run: |
+       pwd
+       ls -lah build/libs/
+       test -f build/libs/java-app-1.0-SNAPSHOT.jar
 
     # NOTE: The Gradle Wrapper is the default and recommended way to run Gradle (https://docs.gradle.org/current/userguide/gradle_wrapper.html).
     # If your project does not have the Gradle Wrapper configured, you can use the following configuration to run Gradle with a specified version.
