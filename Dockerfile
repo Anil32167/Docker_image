@@ -2,7 +2,7 @@ FROM eclipse-temurin:11-jre
 
 WORKDIR /usr/app
 
-COPY build/libs/New-Java-Gradle-0.0.1-SNAPSHOT.jar app.jar
+COPY build/libs/java-app-1.0-SNAPSHOT.jar
 
 EXPOSE 8080
 
